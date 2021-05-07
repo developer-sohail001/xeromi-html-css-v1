@@ -1,0 +1,28 @@
+{
+  "name": "xeromi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Private",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/line-clamp": "^0.2.0",
+    "tailwindcss": "^2.0.3"
+  },
+  "scripts": {
+    "start": "serve",
+    "build": "npx tailwindcss-cli@latest build -o ./css/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesandbox-app/static-template.git"
+  },
+  "keywords": ["static", "template", "codesandbox"],
+  "author": "Ives van Hoorne",
+  "bugs": {
+    "url": "https://github.com/codesandbox-app/static-template/issues"
+  },
+  "homepage": "https://github.com/codesandbox-app/static-template#readme",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}

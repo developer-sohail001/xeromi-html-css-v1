@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../../../css/tailwind.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: Rubik, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="h-screen flex" style="background-color: #f1f5f9;">
+      <div class="flex flex-col w-0 flex-1 overflow-hidden">
+        <main
+          class="flex-1 relative overflow-y-auto focus:outline-none"
+          tabIndex="0"
+        >
+          <div class="px-8 py-3">
+            <div class="mt-6 flex justify-center">
+              <!-- MODAL BEGIN -->
+
+              <div>
+                <div
+                  class="bg-white flex flex-col p-6 rounded-md m-3.5"
+                  style="width: fit-content;"
+                >
+                  <div
+                    class="flex flex-row w-96 items-center justify-between mb-6"
+                  >
+                    <span class="text-lg leading-6 font-medium"
+                      >Create Task</span
+                    >
+                    <div class="inline-block">
+                      <div class="cursor-pointer">
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 13L13 1M1 1L13 13"
+                            stroke="#9ca3af"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-6 w-96">
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Task Name</label
+                    >
+                    <input
+                      type="text"
+                      name="task"
+                      id="task"
+                      class="shadow-sm focus:ring-geekBlue-500 focus:border-geekBlue-500 block w-full sm:text-sm border-gray-300 rounded-xl"
+                      placeholder="Enter Task Name"
+                    />
+                  </div>
+                  <div
+                    class="mb-6 w-full flex flex-row items-center justify-between"
+                  >
+                    <div>
+                      <label
+                        id="listbox-label"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Department
+                      </label>
+                      <div class="mt-1 relative">
+                        <button
+                          type="button"
+                          class="bg-white relative w-full border border-gray-300 rounded-xl shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-geekBlue-500 focus:border-geekBlue-500 sm:text-sm"
+                          aria-haspopup="listbox"
+                          aria-expanded="true"
+                          aria-labelledby="listbox-label"
+                        >
+                          <span class="block truncate">
+                            Select Department
+                          </span>
+                          <span
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
+                          >
+                            <!-- Heroicon name: solid/selector -->
+                            <svg
+                              class="h-5 w-5 text-gray-400"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+
+                        <!-- SELECT OPTIONS -->
+
+                        <ul
+                          class="hidden absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                          tabindex="-1"
+                          role="listbox"
+                          aria-labelledby="listbox-label"
+                          aria-activedescendant="listbox-option-3"
+                        >
+                          <li
+                            class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9"
+                            id="listbox-option-0"
+                            role="option"
+                          >
+                            <span class="font-normal block truncate">
+                              Finance
+                            </span>
+                            <span
+                              class="text-geekBlue-600 absolute inset-y-0 right-0 flex items-center pr-4"
+                            >
+                              <svg
+                                class="h-5 w-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </li>
+                        </ul>
+
+                        <!-- SELECT OPTIONS END -->
+                      </div>
+                    </div>
+                    <div>
+                      <label
+                        id="listbox-label"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Assigned To
+                      </label>
+                      <div class="mt-1 relative">
+                        <button
+                          type="button"
+                          class="bg-white relative w-full border border-gray-300 rounded-xl shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-geekBlue-500 focus:border-geekBlue-500 sm:text-sm"
+                          aria-haspopup="listbox"
+                          aria-expanded="true"
+                          aria-labelledby="listbox-label"
+                        >
+                          <span class="block truncate">
+                            Select Assignee
+                          </span>
+                          <span
+                            class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
+                          >
+                            <!-- Heroicon name: solid/selector -->
+                            <svg
+                              class="h-5 w-5 text-gray-400"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+
+                        <!-- SELECT OPTIONS -->
+
+                        <ul
+                          class="hidden absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
+                          tabindex="-1"
+                          role="listbox"
+                          aria-labelledby="listbox-label"
+                          aria-activedescendant="listbox-option-3"
+                        >
+                          <li
+                            class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9"
+                            id="listbox-option-0"
+                            role="option"
+                          >
+                            <span class="font-normal block truncate">
+                              Finance
+                            </span>
+                            <span
+                              class="text-geekBlue-600 absolute inset-y-0 right-0 flex items-center pr-4"
+                            >
+                              <svg
+                                class="h-5 w-5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                aria-hidden="true"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </li>
+                        </ul>
+
+                        <!-- SELECT OPTIONS END -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-96 flex flex-row justify-end">
+                    <button
+                      type="button"
+                      class="mr-3 inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-xl text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-geekBlue-500"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="button"
+                      class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-geekBlue-500 hover:bg-geekBlue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-geekBlue-400"
+                    >
+                      Create task
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODAL END -->
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
